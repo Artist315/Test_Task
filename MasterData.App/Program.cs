@@ -1,0 +1,32 @@
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using AutoMapper;
+using Extensions;
+using MasterData.CounterTrends;
+using MasterData.Trends;
+using MasterData.ParameterTrends;
+using MasterData.Units;
+using MasterData.Equipments;
+using FluentValidation;
+using Microsoft.AspNetCore.Builder;
+
+namespace MasterData.App
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
+}
