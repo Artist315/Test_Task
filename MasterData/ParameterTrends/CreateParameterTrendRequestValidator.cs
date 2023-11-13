@@ -9,17 +9,17 @@ namespace MasterData.ParameterTrends
         {
             RuleFor(p => p.Name)
                .NotEmpty()
-               .WithMessage("Поле Name не может быть пустым");
+               .WithMessage("Field Name cannot be empty");
 
             RuleFor(p => p.TrendId)
                 .NotEqual(Guid.Empty)
-                .WithMessage("Поле TrendId не может быть пустым");
+                .WithMessage("Field TrendId cannot be empty");
 
             RuleFor(p => p.RecordMode)
                .IsInEnum()
-               .WithMessage("RecordMode должен быть типа enum")
+               .WithMessage("RecordMode must be enum")
                .NotEmpty()
-               .WithMessage("RecordMode не может быть пустым");
+               .WithMessage("RecordMode cannot be empty");
         }
     }
 }

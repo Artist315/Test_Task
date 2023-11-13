@@ -8,11 +8,11 @@ namespace MasterData.Trends
         {
             RuleFor(p => p.Name)
                .NotEmpty()
-               .WithMessage("Поле Name не может быть пустым");
+               .WithMessage("Filed Name cannot be empty");
 
             RuleFor(p => p)
                 .Must(c => (c.UnitId != null) != (c.EquipmentId != null))
-               .WithMessage("Только одно из полей UnitId и EquipmentId может быть задано");
+               .WithMessage("Only of fields UnitId or EquipmentId can be assigned");
         }
     }
 }

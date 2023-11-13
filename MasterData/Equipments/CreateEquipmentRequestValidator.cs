@@ -9,11 +9,11 @@ namespace MasterData.Equipments
         {
             RuleFor(p => p.Name)
                .NotEmpty()
-               .WithMessage( "Поле Name не может быть пустым");
+               .WithMessage( "Field Name cannot be empty");
             
             RuleFor(p => p.UnitId)
                .NotEqual(Guid.Empty)
-               .WithMessage("Поле UnitId не может быть пустым");
+               .WithMessage("Field UnitId cannot be empty");
         }
     }
 }

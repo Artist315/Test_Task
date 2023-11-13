@@ -8,7 +8,7 @@ namespace MasterData.Units
         {
             RuleFor(p => p.Name)
                .NotEmpty()
-               .WithMessage("Поле Name не может быть пустым");
+               .WithMessage("Filed Name cannot be empty");
         }
     }
 }
